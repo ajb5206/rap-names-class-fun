@@ -3,9 +3,21 @@ const app = express() // app holds express
 const PORT = 8000
 
 const savage = {
-	'age': 29,
-	'birthName': 'Something something SOmething',
-	'birthLocation': 'London, England'
+	'21 Savage':{
+			'age': 29,
+			'birthName': 'Something something SOmething',
+			'birthLocation': 'London, England'
+	},
+	'Chance the Rapper':{
+		'age': 29,
+		'birthName': 'Chancelor Bennett',
+		'birthLocation': 'Chicago, Illinois'
+	},
+	'Dylan':{
+		'age': 29,
+		'birthName': 'Dylan',
+		'birthLocation': 'Dylan'
+	}
 }
 
 app.get('/', (request, response) =>{
