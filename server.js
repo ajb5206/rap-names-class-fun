@@ -24,7 +24,8 @@ app.get('/', (request, response) =>{
 	response.sendFile(__dirname + '/index.html')
 })
 
-app.get('/api', (request, response) =>{
+app.get('/api/:rapperName', (request, response) =>{
+	console.log(request.params.rapperName)
 	response.json(rappers)
 })
 
