@@ -25,8 +25,13 @@ app.get('/', (request, response) =>{
 })
 
 app.get('/api/:rapperName', (request, response) =>{
-	console.log(request.params.rapperName)
-	response.json(rappers)
+	const rappersName = request.params.rapperName
+	if(rappers[rappersName]){
+		response.json(rappers[rappersName])
+	}else{
+		response.json(rappers['Dylan'])
+	}
+	//response.json(rappers)
 })
 
 app.listen(PORT, () => {
