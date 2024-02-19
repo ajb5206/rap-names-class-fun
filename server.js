@@ -2,7 +2,7 @@ const express = require('express')
 const app = express() // app holds express
 const PORT = 8000
 
-const savage = {
+const rappers = {
 	'21 Savage':{
 			'age': 29,
 			'birthName': 'Something something SOmething',
@@ -25,7 +25,7 @@ app.get('/', (request, response) =>{
 })
 
 app.get('/api', (request, response) =>{
-	response.json(savage)
+	response.json(rappers)
 })
 
 app.listen(PORT, () => {
